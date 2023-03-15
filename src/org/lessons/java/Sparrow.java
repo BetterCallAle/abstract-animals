@@ -1,6 +1,6 @@
 package org.lessons.java;
 
-public class Sparrow extends Animal{
+public class Sparrow extends Animal implements CanFly{
     private String color;
 
     //CONSTRUCTOR
@@ -36,5 +36,10 @@ public class Sparrow extends Animal{
     @Override
     public void eat() {
         System.out.println(super.eatMessage() + "sunflower seeds");
+    }
+
+    @Override
+    public void fly() {
+        System.out.println("I'm flying");
     }
 }

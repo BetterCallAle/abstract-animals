@@ -12,16 +12,21 @@ public class Main {
             sparrow.eat();
             sparrow.sound();
             sparrow.sleep();
+            sparrow.fly();
             System.out.println("-----------");
             Eagle eagle = new Eagle("female", "Ellie", 4, "royal");
             eagle.eat();
             eagle.sound();
             eagle.sleep();
+            eagle.fly();
             System.out.println("-----------");
             Dolphin dolphin = new Dolphin("male", "Joel", 5);
             dolphin.eat();
             dolphin.sound();
             dolphin.sleep();
+            dolphin.swim();
+            System.out.println("-----------");
+
         } catch (IllegalArgumentException e){
             System.out.println(e.getMessage());
         }
