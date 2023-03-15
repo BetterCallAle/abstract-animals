@@ -13,22 +13,39 @@ public class Main {
             sparrow.sound();
             sparrow.sleep();
             sparrow.fly();
+            if(sparrow instanceof CanFly){
+                fly(sparrow);
+            }
             System.out.println("-----------");
             Eagle eagle = new Eagle("female", "Ellie", 4, "royal");
             eagle.eat();
             eagle.sound();
             eagle.sleep();
-            eagle.fly();
+            if (eagle instanceof CanFly){
+                fly(eagle);
+            }
+
             System.out.println("-----------");
             Dolphin dolphin = new Dolphin("male", "Joel", 5);
             dolphin.eat();
             dolphin.sound();
             dolphin.sleep();
             dolphin.swim();
+            if (dolphin instanceof CanSwim){
+                swim(dolphin);
+            }
             System.out.println("-----------");
 
         } catch (IllegalArgumentException e){
             System.out.println(e.getMessage());
         }
+    }
+
+    public static void fly(CanFly bird){
+        bird.fly();
+    }
+
+    public static void swim(CanSwim fish){
+        fish.swim();
     }
 }
