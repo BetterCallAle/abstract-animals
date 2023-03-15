@@ -22,6 +22,12 @@ public class Sparrow extends Animal{
     }
 
     //METHODS
+
+    @Override
+    public String toString() {
+        return super.toString() + ", " + color;
+    }
+
     @Override
     public void sound() {
         System.out.println("Cheep cheep");
