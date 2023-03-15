@@ -30,12 +30,12 @@ public abstract class Animal {
 
     //SETTERS
     public void setGender(String gender) {
-        checkString(gender, "genere");
+        checkString(gender, "gender");
         this.gender = gender;
     }
 
     public void setName(String name) {
-        checkString(name, "nome");
+        checkString(name, "name");
         this.name = name;
     }
 
@@ -54,15 +54,15 @@ public abstract class Animal {
                 ", age=" + age;
     }
 
-    private void checkString(String s, String message){
+    protected void checkString(String s, String message){
         if(s.trim().isEmpty() ){
-            throw new IllegalArgumentException("Il " + message + " deve essere inserito");
+            throw new IllegalArgumentException("The " + message + " must be typed");
         }
     }
 
     private void checkAge(int age){
         if(age < 0){
-            throw new IllegalArgumentException("L'età non può essere minore di zero");
+            throw new IllegalArgumentException("The age can't be lower than zero");
         }
     }
 
