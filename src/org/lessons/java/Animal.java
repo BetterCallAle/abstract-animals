@@ -6,7 +6,7 @@ public abstract class Animal {
     private int age;
 
     //CONSTRUCTOR
-    public Animal(String gender, String name, int age){
+    public Animal(String gender, String name, int age) throws IllegalArgumentException{
         checkString(gender, "genere");
         checkString(name, "nome");
         checkAge(age);
@@ -71,6 +71,10 @@ public abstract class Animal {
     }
 
     public abstract void sound();
+
+    protected String eatMessage(){
+        return "I'm eating ";
+    }
 
     public abstract void eat();
 }

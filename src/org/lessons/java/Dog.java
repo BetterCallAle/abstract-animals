@@ -4,7 +4,7 @@ public class Dog extends Animal{
     private String breed;
 
     //CONSTRUCTOR
-    public Dog(String gender, String name, int age, String breed) {
+    public Dog(String gender, String name, int age, String breed) throws IllegalArgumentException {
         super(gender, name, age);
         super.checkString(breed, "breed");
         this.breed = breed;
@@ -23,8 +23,6 @@ public class Dog extends Animal{
 
 
     //METHODS
-
-
     @Override
     public String toString() {
         return super.toString() + ", " + breed;
@@ -37,6 +35,6 @@ public class Dog extends Animal{
 
     @Override
     public void eat() {
-        System.out.println("I'm eating kibble");
+        System.out.println(super.eatMessage() + "kibble");
     }
 }
